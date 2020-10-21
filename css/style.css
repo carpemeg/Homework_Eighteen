@@ -36,6 +36,30 @@ body {
     width: 500px;
     margin: 0 auto;
 }
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.workGrid {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-areas: 
+    "Haven"
+    "RoamingChef"
+    "BBBS";
+}
+.Haven {
+    grid-area: Haven;
+}
+.RoamingChef {
+    grid-area: RoamingChef;
+}
+.BBBS {
+    grid-area: BBBS;
+}
+
 .footer {
     background-color: #373738;
     text-align: center;
@@ -49,4 +73,10 @@ body {
     display: inline-block;
     vertical-align: top;
     text-align: center;
+}
+@media only screen and (max-width: 600){
+    .flexContainer {
+        flex-direction: column;
+        grid-template-rows: 250px 250px 250px;
+    }
 }
